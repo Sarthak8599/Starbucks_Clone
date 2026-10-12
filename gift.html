@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Clone - Gift Cards</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://www.starbucks.in/assets/icon/logo.png" type="image/png">
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top px-lg-5">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                
+                    <img src="https://www.starbucks.in/assets/icon/logo.png" alt="Starbucks" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto ms-lg-4 mb-2 mb-lg-0 fw-bold header-links">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gift.html">Gift</a></li>
+                    <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
+                    <li class="nav-item"><a class="nav-link" href="store.html">Store</a></li>
+                    <li class="nav-item"><a class="nav-link" href="corporate.html">Corporate Gifting</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="search-container position-relative">
+                        <input type="text" class="form-control rounded-pill search-input" placeholder="Looking for something specific?">
+                        <i class="fa fa-search position-absolute search-icon"></i>
+                    </div>
+                    <a href="profile.html" class="profile-icon"><i class="fa-regular fa-user fs-4 text-dark"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container mt-5 pt-5 mb-5">
+
+        
+        <button class="gift-tabs-mobile-toggle" id="giftTabsToggle">
+            <span id="giftTabsToggleText">FEATURED</span>
+            <i class="fa fa-chevron-down float-end"></i>
+        </button>
+        
+        <div class="gift-tabs-mobile-menu" id="giftTabsMobileMenu">
+            <div class="gift-tabs-mobile-item active" data-bs-target="#featured" data-tab="featured">FEATURED</div>
+            <div class="gift-tabs-mobile-item" data-bs-target="#anytime" data-tab="anytime">ANYTIME</div>
+            <div class="gift-tabs-mobile-item" data-bs-target="#congratulations" data-tab="congratulations">CONGRATULATIONS</div>
+            <div class="gift-tabs-mobile-item" data-bs-target="#thankyou" data-tab="thankyou">Thank You</div>
+            <div class="gift-tabs-mobile-item" data-bs-target="#festival" data-tab="festival">Festival Special</div>
+        </div>
+
+        <ul class="nav nav-tabs border-0 my-4 gift-tabs" id="giftTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active"
+                        id="featured-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#featured"
+                        type="button"
+                        role="tab"
+                        aria-controls="featured"
+                        aria-selected="true">FEATURED</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link"
+                        id="anytime-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#anytime"
+                        type="button"
+                        role="tab"
+                        aria-controls="anytime"
+                        aria-selected="false">ANYTIME</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link"
+                        id="congratulations-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#congratulations"
+                        type="button"
+                        role="tab"
+                        aria-controls="congratulations"
+                        aria-selected="false">CONGRATULATIONS</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link"
+                        id="thankyou-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#thankyou"
+                        type="button"
+                        role="tab"
+                        aria-controls="thankyou"
+                        aria-selected="false">THANK YOU</button>
+            </li>
+            <li class="nav-item" role="festival">
+                <button class="nav-link"
+                        id="festival-tab"
+                        data-bs-toggle="tab"
+                        data-bs-target="#festival"
+                        type="button"
+                        role="tab"
+                        aria-controls="festival"
+                        aria-selected="false">FESTIVAL SPECIAL</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="giftTabContent">
+
+            
+            
+<div class="tab-pane fade show active" id="featured" role="tabpanel" aria-labelledby="featured-tab">
+
+    <h5 class="fw-bold my-4 text-secondary">Anytime</h5>
+    <div class="row g-4">
+        <div class="col-md-4"><div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white"><img src="India.png" alt="India Exclusive Gift Card" class="gift-banner-img mb-3"><h6 class="fw-bold">India Exclusive</h6><p class="text-muted small">Bring in the festive season and make each celebration memorable.</p><div class="text-end"><button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button></div></div></div>
+        <div class="col-md-4"><div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white"><img src="starbuckscofee.png" alt="Starbucks Coffee Gift Card" class="gift-banner-img mb-3"><h6 class="fw-bold">Starbucks Coffee</h6><p class="text-muted small">Starbucks is best when shared. Treat your pals to a good cup of coffee.</p><div class="text-end"><button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button></div></div></div>
+        <div class="col-md-4"><div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white"><img src="youkeepmewarm.webp" alt="U Keep Me Warm" class="gift-banner-img mb-3"><h6 class="fw-bold">U Keep Me Warm</h6><p class="text-muted small">Captivating, cosy, coffee. Gift your loved ones this Starbucks Gift Card.</p><div class="text-end"><button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button></div></div></div>
+    </div>
+
+    <h5 class="fw-bold my-5 text-secondary">Congratulations</h5>
+    <div class="row g-4">
+        <div class="col-md-4"><div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white"><img src="congrats.png" alt="Congratulations Gift Card" class="gift-banner-img mb-3"><h6 class="fw-bold">Congrats</h6><p class="text-muted small">Coffee. Cheer. Celebrate. Enjoy each of your special moments with Starbucks.</p><div class="text-end"><button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button></div></div></div>
+    </div>
+
+    <h5 class="fw-bold my-5 text-secondary">Thank You</h5>
+    <div class="row g-4">
+        <div class="col-md-4"><div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white"><img src="thankyou.webp" alt="Thank You" class="gift-banner-img mb-3"><h6 class="fw-bold">Thank You</h6><p class="text-muted small">To the people who make coffee and those who love it, thank you.</p><div class="text-end"><button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button></div></div></div>
+        <div class="col-md-4"><div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white"><img src="morethanwords.png" alt="More Than Words" class="gift-banner-img mb-3"><h6 class="fw-bold">More Than Words</h6><p class="text-muted small">A Starbucks gift card is the perfect way to say thanks.</p><div class="text-end"><button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button></div></div></div>
+        <div class="col-md-4"><div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white"><img src="asipof.png" alt="A Sip of Appreciation" class="gift-banner-img mb-3"><h6 class="fw-bold">A Sip of Appreciation</h6><p class="text-muted small">Say thank you in the most flavorful way.</p><div class="text-end"><button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button></div></div></div>
+    </div>
+
+    <h5 class="fw-bold my-5 text-secondary">Festive Specials</h5>
+    <div class="row g-4">
+        <div class="col-md-4"><div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white"><img src="madefor.png" alt="Made for Sweet Moments" class="gift-banner-img mb-3"><h6 class="fw-bold">Made for Sweet Moments</h6><p class="text-muted small">A little card, a lot of love, and their favorite cup.</p><div class="text-end"><button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button></div></div></div>
+    </div>
+</div>
+
+            <div class="tab-pane fade" id="anytime" role="tabpanel" aria-labelledby="anytime-tab">
+                <h5 class="fw-bold my-4 text-secondary">Anytime</h5>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white">
+                            
+                            <img src="India.png" alt="India Exclusive Gift Card" class="gift-banner-img mb-3">
+                            <h6 class="fw-bold">India Exclusive</h6>
+                            <p class="text-muted small">Bring in the festive season and make each celebration memorable.</p>
+                            <div class="text-end">
+                                <button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white">
+                            
+                            <img src="starbuckscofee.png" alt="Starbucks Coffee Gift Card" class="gift-banner-img mb-3">
+                            <h6 class="fw-bold">Starbucks Coffee</h6>
+                            <p class="text-muted small">Starbucks is best when shared. Treat your pals to a good cup of coffee.</p>
+                            <div class="text-end">
+                                <button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white">
+                            
+                            <img src="starbucks.webp" alt="Starbucks Coffee Gift Card" class="gift-banner-img mb-3">
+                            <h6 class="fw-bold">Starbucks</h6>
+                            <p class="text-muted small">Take the moment and make it special with Starbucks.</p>
+                            <div class="text-end">
+                                <button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white">
+                            
+                            <img src="hanginthere.png" alt="Starbucks Coffee Gift Card" class="gift-banner-img mb-3">
+                            <h6 class="fw-bold">Hang In There</h6>
+                            <p class="text-muted small">Sometimes, company goes a long way. Let your friends know you have their back.</p>
+                            <div class="text-end">
+                                <button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white">
+                            
+                            <img src="mytreat.png" alt="My Treat Gift Card" class="gift-banner-img mb-3">
+                            <h6 class="fw-bold">My Treat</h6>
+                            <p class="text-muted small">Nothing like a cup of coffee to flame a friendship. Share the experience with your best fr..</p>
+                            <div class="text-end">
+                                <button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white">
+                            
+                            <img src="waytogo.webp" alt="Starbucks Coffee Gift Card" class="gift-banner-img mb-3">
+                            <h6 class="fw-bold">Way To Go</h6>
+                            <p class="text-muted small">It's time to celebrate! Show your appreciation with this Starbucks Gift Card.</p>
+                            <div class="text-end">
+                                <button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white">
+                            
+                            <img src="thisonesonme.webp" alt="Starbucks Coffee Gift Card" class="gift-banner-img mb-3">
+                            <h6 class="fw-bold">This One's On Me</h6>
+                            <p class="text-muted small">Everything I brew, I brew it for you. This one's on me.</p>
+                            <div class="text-end">
+                                <button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white">
+                            
+                            <img src="goodthingahead.png" alt="Starbucks Coffee Gift Card" class="gift-banner-img mb-3">
+                            <h6 class="fw-bold">Good Things Ahead</h6>
+                            <p class="text-muted small">Have a cup of coffee, it's all good from here.</p>
+                            <div class="text-end">
+                                <button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white">
+                            
+                            <img src="you are the best just sating.webp" alt="Starbucks Coffee Gift Card" class="gift-banner-img mb-3">
+                            <h6 class="fw-bold">U Are The Best Just Sayin</h6>
+                            <p class="text-muted small">Think they're the Nitro to your Brew? Let them know.</p>
+                            <div class="text-end">
+                                <button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white">
+                            
+                            <img src="lifehappines.png" alt="Starbucks Coffee Gift Card" class="gift-banner-img mb-3">
+                            <h6 class="fw-bold">Life Happens</h6>
+                            <p class="text-muted small">Life happens, coffee helps. Brighten up their day with Starbucks.</p>
+                            <div class="text-end">
+                                <button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white">
+                            
+                            <img src="youareawesome.webp" alt="Starbucks Coffee Gift Card" class="gift-banner-img mb-3">
+                            <h6 class="fw-bold">U Are Awesome</h6>
+                            <p class="text-muted small">If you love someone, let 'em know. Share this Gift Card with all the awesome people in you..</p>
+                            <div class="text-end">
+                                <button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white">
+                            
+                            <img src="greeting.png" alt="Starbucks Coffee Gift Card" class="gift-banner-img mb-3">
+                            <h6 class="fw-bold">Greetings</h6>
+                            <p class="text-muted small">Let each 'hello' be one with coffee.</p>
+                            <div class="text-end">
+                                <button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white">
+                            
+                            <img src="globalsritcard.png" alt="Starbucks Coffee Gift Card" class="gift-banner-img mb-3">
+                            <h6 class="fw-bold">Global Spring Card</h6>
+                            <p class="text-muted small">Blissful, blooming, and bright. Spring is a merry time. Keep things fresh and lively.</p>
+                            <div class="text-end">
+                                <button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white">
+                            
+                            <img src="youkeepmewarm.webp" alt="Starbucks Coffee Gift Card" class="gift-banner-img mb-3">
+                            <h6 class="fw-bold">U Keep Me Warm</h6>
+                            <p class="text-muted small">Captivating, cosy, coffee. Gift your loved ones this Starbucks Gift Card.</p>
+                            <div class="text-end">
+                                <button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="tab-pane fade" id="congratulations" role="tabpanel" aria-labelledby="congratulations-tab">
+                <h5 class="fw-bold my-4 text-secondary">Congratulations</h5>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white">
+                            
+                            <img src="congrats.png" alt="Congratulations Gift Card" class="gift-banner-img mb-3">
+                            <h6 class="fw-bold">Congrats</h6>
+                            <p class="text-muted small">Coffee. Cheer. Celebrate. Enjoy each of your special moments with Starbucks.</p>
+                            <div class="text-end">
+                                <button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="tab-pane fade" id="thankyou" role="tabpanel" aria-labelledby="thankyou-tab">
+                <h5 class="fw-bold my-4 text-secondary">Thank You</h5>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white">
+                            
+                            <img src="thankyou.webp" alt="India Exclusive Gift Card" class="gift-banner-img mb-3">
+                            <h6 class="fw-bold">Thank You</h6>
+                            <p class="text-muted small">To the people who make coffee and those who love it, thank you.</p>
+                            <div class="text-end">
+                                <button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white">
+                            
+                            <img src="morethanwords.png" alt="Starbucks Coffee Gift Card" class="gift-banner-img mb-3">
+                            <h6 class="fw-bold">More Than Words</h6>
+                            <p class="text-muted small">Whether it’s a big favor or a small gesture, a Starbucks gift card is the perfect way to s..</p>
+                            <div class="text-end">
+                                <button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white">
+                            
+                            <img src="asipof.png" alt="Starbucks Coffee Gift Card" class="gift-banner-img mb-3">
+                            <h6 class="fw-bold">A Sip of Appreciation</h6>
+                            <p class="text-muted small">Say thank you in the most flavorful way—with a Starbucks gift card brewed with gratitude.</p>
+                            <div class="text-end">
+                                <button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="festival" role="tabpanel" aria-labelledby="festival-tab">
+                <h5 class="fw-bold my-4 text-secondary">Festival Special</h5>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card card-gift border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-white">
+                            
+                            <img src="madefor.png" alt="India Exclusive Gift Card" class="gift-banner-img mb-3">
+                            <h6 class="fw-bold">Made for Sweet Moments</h6>
+                            <p class="text-muted small">A little card, a lot of love, and their favorite cup.</p>
+                            <div class="text-end">
+                                <button class="btn btn-success btn-sm rounded-pill px-3 fw-bold">Add Item</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    </section>
+
+<footer class="bg-deep-green text-white py-5 mt-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-2 col-md-3 text-center text-md-start">
+                <img src="https://www.starbucks.in/assets/icon/logo.png"
+                     alt="Starbucks Logo"
+                     class="logo-img d-inline-block mx-auto mx-md-0">
+            </div>
+
+            <div class="col-lg-2 col-md-3">
+                <h6 class="fw-bold mb-3 text-uppercase tracking-wider">About Us</h6>
+                <ul class="list-unstyled footer-links m-0">
+                    <li><a href="#" class="d-block py-1 small text-decoration-none">Our Heritage</a></li>
+                    <li><a href="#" class="d-block py-1 small text-decoration-none">Coffeehouse</a></li>
+                    <li><a href="#" class="d-block py-1 small text-decoration-none">Our Company</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-3">
+                <h6 class="fw-bold mb-3 text-uppercase tracking-wider">Responsibility</h6>
+                <ul class="list-unstyled footer-links m-0">
+                    <li><a href="#" class="d-block py-1 small text-decoration-none">Diversity</a></li>
+                    <li><a href="#" class="d-block py-1 small text-decoration-none">Community</a></li>
+                    <li><a href="#" class="d-block py-1 small text-decoration-none">Ethical Sourcing</a></li>
+                    <li><a href="#" class="d-block py-1 small text-decoration-none">Environmental Stewardship</a></li>
+                    <li><a href="#" class="d-block py-1 small text-decoration-none">Learn More</a></li>
+                    <li><a href="#" class="d-block py-1 small text-decoration-none">Bonus Star</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-3">
+                <h6 class="fw-bold mb-3 text-uppercase tracking-wider">Legal</h6>
+                <ul class="list-unstyled footer-links m-0">
+                    <li><a href="#" class="d-block py-1 small text-decoration-none">Disclaimer</a></li>
+                    <li><a href="#" class="d-block py-1 small text-decoration-none">Food Safety</a></li>
+                    <li><a href="#" class="d-block py-1 small text-decoration-none">Nutritional Details</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-12">
+                <h6 class="fw-bold mb-3 text-uppercase tracking-wider">Quick Links</h6>
+                <ul class="list-unstyled footer-links m-0">
+                    <li><a href="#" class="d-block py-1 small text-decoration-none">FAQs</a></li>
+                    <li><a href="#" class="d-block py-1 small text-decoration-none">Customer Service</a></li>
+                    <li><a href="#" class="d-block py-1 small text-decoration-none">Delivery</a></li>
+                    <li><a href="#" class="d-block py-1 small text-decoration-none">Loyalty Program Terms and Conditions</a></li>
+                    <li><a href="#" class="d-block py-1 small text-decoration-none">Starbucks India Mobile App Terms of Use</a></li>
+                    <li><a href="#" class="d-block py-1 small text-decoration-none">Personalized Offer</a></li>
+                    <li><a href="store.html" class="d-block py-1 small text-decoration-none">Store Locator</a></li>
+                    <li><a href="#" class="d-block py-1 small text-decoration-none">Protein Combos</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+<script>
+    $(document).ready(function() {
+        // Mobile gift tabs toggle functionality
+        $('#giftTabsToggle').on('click', function() {
+            $('#giftTabsMobileMenu').toggleClass('show');
+            var icon = $(this).find('i');
+            if ($('#giftTabsMobileMenu').hasClass('show')) {
+                icon.removeClass('fa-chevron-down').addClass('fa-chevron-up');
+            } else {
+                icon.removeClass('fa-chevron-up').addClass('fa-chevron-down');
+            }
+        });
+
+        $('.gift-tabs-mobile-item').on('click', function() {
+            var target = $(this).data('bs-target');
+            var tabText = $(this).text();
+            
+            // Update mobile menu active state
+            $('.gift-tabs-mobile-item').removeClass('active');
+            $(this).addClass('active');
+            
+            // Update toggle button text
+            $('#giftTabsToggleText').text(tabText);
+            
+            // Hide mobile menu
+            $('#giftTabsMobileMenu').removeClass('show');
+            $('#giftTabsToggle').find('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+            
+            // Trigger Bootstrap tab change
+            $('.gift-tabs .nav-link[data-bs-target="' + target + '"]').tab('show');
+        });
+
+        // Sync desktop tabs with mobile menu
+        $('.gift-tabs .nav-link').on('shown.bs.tab', function(e) {
+            var target = $(e.target).data('bs-target');
+            var tabText = $(e.target).text();
+            
+            $('.gift-tabs-mobile-item').removeClass('active');
+            $('.gift-tabs-mobile-item[data-bs-target="' + target + '"]').addClass('active');
+            $('#giftTabsToggleText').text(tabText);
+        });
+
+        if ($('.wishlist-icon').length === 0) {
+            var wishlistIconHtml = `
+                <a href="wishlist.html" class="wishlist-icon position-relative text-dark me-2" style="text-decoration: none;">
+                    <i class="fa-regular fa-heart fs-4"></i>
+                    <span class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle wishlist-badge" style="font-size: 0.65rem; display: none;">0</span>
+                </a>
+            `;
+            if ($('.cart-icon').length > 0) {
+                $('.cart-icon').before(wishlistIconHtml);
+            } else if ($('.profile-icon').length > 0) {
+                $('.profile-icon').before(wishlistIconHtml);
+            }
+        }
+
+        function getWishlist() {
+            return JSON.parse(localStorage.getItem('starbucks_wishlist')) || [];
+        }
+
+        function saveWishlist(wishlist) {
+            localStorage.setItem('starbucks_wishlist', JSON.stringify(wishlist));
+            updateWishlistBadge();
+        }
+
+        function updateWishlistBadge() {
+            var wishlist = getWishlist();
+            if (wishlist.length > 0) {
+                $('.wishlist-badge').text(wishlist.length).show();
+            } else {
+                $('.wishlist-badge').hide();
+            }
+        }
+
+        var wishlist = getWishlist();
+        
+        $('.menu-card, .product-card, .card-gift').each(function() {
+            var card = $(this);
+            if (card.find('.btn-wishlist').length === 0) {
+                var name = "";
+                if (card.hasClass('menu-card')) {
+                    name = card.find('.menu-card-title').text().trim();
+                } else if (card.hasClass('product-card')) {
+                    name = card.find('h6').text().trim();
+                } else if (card.hasClass('card-gift')) {
+                    name = card.find('h6').text().trim();
+                }
+
+                if (name) {
+                    var inWishlist = wishlist.some(item => item.name === name);
+                    var heartClass = inWishlist ? 'fa-solid fa-heart text-danger' : 'fa-regular fa-heart text-secondary';
+                    card.css('position', 'relative').prepend(`
+                        <button class="btn-wishlist position-absolute border-0 bg-transparent p-0" data-name="${name}" style="top: 15px; right: 15px; z-index: 5; line-height: 1;">
+                            <i class="${heartClass} fs-5"></i>
+                        </button>
+                    `);
+                }
+            }
+        });
+
+        updateWishlistBadge();
+
+        $(document).on('click', '.btn-wishlist', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var btn = $(this);
+            var name = btn.data('name');
+            var wishlist = getWishlist();
+            var index = wishlist.findIndex(item => item.name === name);
+            var heartIcon = btn.find('i');
+
+            if (index > -1) {
+                wishlist.splice(index, 1);
+                heartIcon.removeClass('fa-solid fa-heart text-danger').addClass('fa-regular fa-heart text-secondary');
+            } else {
+                var price = 500.00;
+                var img = "";
+                
+                var menuCard = btn.closest('.menu-card');
+                if (menuCard.length > 0) {
+                    var priceText = menuCard.find('.menu-card-price').text();
+                    price = parseFloat(priceText.replace(/[^\d.]/g, '')) || 0;
+                    img = menuCard.find('.menu-card-img-circle img').attr('src');
+                } 
+                else {
+                    var productCard = btn.closest('.product-card');
+                    if (productCard.length > 0) {
+                        var priceText = productCard.find('.fw-bold').first().text();
+                        price = parseFloat(priceText.replace(/[^\d.]/g, '')) || 0;
+                        img = productCard.find('.product-img').attr('src');
+                    }
+                    else {
+                        var giftCard = btn.closest('.card-gift');
+                        if (giftCard.length > 0) {
+                            img = giftCard.find('.gift-banner-img').attr('src');
+                        }
+                    }
+                }
+
+                wishlist.push({
+                    name: name,
+                    price: price,
+                    img: img || 'https://www.starbucks.in/assets/icon/logo.png'
+                });
+                heartIcon.removeClass('fa-regular fa-heart text-secondary').addClass('fa-solid fa-heart text-danger');
+            }
+
+            saveWishlist(wishlist);
+        });
+    });
+</script>
+</body>
+</html>

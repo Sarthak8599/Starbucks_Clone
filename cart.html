@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Starbucks Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://www.starbucks.in/assets/icon/logo.png" type="image/png">
+    <style>
+        .cart-img-container {
+            width: 80px;
+            height: 80px;
+            background-color: #f7f7f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .cart-img-container img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: cover;
+        }
+        .qty-btn {
+            background: transparent;
+            border: none;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.15s;
+        }
+        .qty-btn:hover {
+            background: #e9e9e9;
+            color: #00754a;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top px-lg-5">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://www.starbucks.in/assets/icon/logo.png" alt="Starbucks" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto ms-lg-4 mb-2 mb-lg-0 fw-bold header-links">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gift.html">Gift</a></li>
+                    <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
+                    <li class="nav-item"><a class="nav-link" href="store.html">Store</a></li>
+                    <li class="nav-item"><a class="nav-link" href="corporate.html">Corporate Gifting</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="search-container position-relative">
+                        <input type="text" class="form-control rounded-pill search-input" placeholder="Looking for something specific?">
+                        <i class="fa fa-search position-absolute search-icon"></i>
+                    </div>
+                    <a href="profile.html" class="profile-icon"><i class="fa-regular fa-user fs-4 text-dark"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5 py-5">
+        <h3 class="fw-bold text-dark mb-4" style="color: #0d382c !important;">Shopping Cart</h3>
+
+        <div class="row g-4" id="cart-content-wrapper">
+            <!-- Left Side: List of items -->
+            <div class="col-lg-8">
+                <div id="cart-items-list" class="d-flex flex-column gap-3">
+                    <!-- Loaded dynamically -->
+                </div>
+            </div>
+
+            <!-- Right Side: Order Summary -->
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-sm rounded-4 p-4 bg-white" id="summary-card" style="display: none;">
+                    <h5 class="fw-bold mb-4" style="color: #0d382c;">Order Summary</h5>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-secondary">Subtotal</span>
+                        <span class="fw-semibold text-dark" id="summary-subtotal">₹ 0.00</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-secondary">Taxes & Charges</span>
+                        <span class="fw-semibold text-dark">₹ 0.00</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <span class="fw-bold text-dark fs-5">Total Amount</span>
+                        <span class="fw-bold fs-4 text-success" id="summary-total" style="color: #00754a !important;">₹ 0.00</span>
+                    </div>
+                    <button class="btn btn-success w-100 rounded-pill py-2.5 fw-bold" style="background-color: #00754a; border-color: #00754a;" id="cartCheckoutBtn">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-deep-green text-white py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-2 col-md-3 text-center text-md-start">
+                    <img src="https://www.starbucks.in/assets/icon/logo.png" alt="Starbucks Logo" class="logo-img d-inline-block mx-auto mx-md-0">
+                </div>
+                <div class="col-lg-2 col-md-3">
+                    <h6 class="fw-bold mb-3 text-uppercase tracking-wider">About Us</h6>
+                    <ul class="list-unstyled footer-links m-0">
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Our Heritage</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Coffeehouse</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Our Company</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <h6 class="fw-bold mb-3 text-uppercase tracking-wider">Responsibility</h6>
+                    <ul class="list-unstyled footer-links m-0">
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Diversity</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Community</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Ethical Sourcing</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Environmental Stewardship</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Learn More</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Bonus Star</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3">
+                    <h6 class="fw-bold mb-3 text-uppercase tracking-wider">Legal</h6>
+                    <ul class="list-unstyled footer-links m-0">
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Disclaimer</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Food Safety</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Nutritional Details</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <h6 class="fw-bold mb-3 text-uppercase tracking-wider">Quick Links</h6>
+                    <ul class="list-unstyled footer-links m-0">
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">FAQs</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Customer Service</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Delivery</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Loyalty Program Terms and Conditions</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Starbucks India Mobile App Terms of Use</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Personalized offer</a></li>
+                        <li><a href="store.html" class="d-block py-1 small text-decoration-none">Store Locator</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Protein Combos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+        $(document).ready(function() {
+            function renderCart() {
+                var cart = JSON.parse(localStorage.getItem('starbucks_cart')) || [];
+                var listContainer = $('#cart-items-list');
+                listContainer.empty();
+
+                if (cart.length === 0) {
+                    $('#summary-card').hide();
+                    $('#cart-content-wrapper').html(`
+                        <div class="col-12 text-center py-5 d-flex flex-column align-items-center justify-content-center mt-5">
+                            <i class="fa-solid fa-basket-shopping text-muted mb-3" style="font-size: 4.5rem; opacity: 0.4;"></i>
+                            <h4 class="fw-bold text-secondary">Your cart is empty</h4>
+                            <p class="text-muted small">Looks like you haven't added anything to your cart yet.</p>
+                            <a href="order.html" class="btn btn-success rounded-pill px-4 py-2 mt-2 fw-bold" style="background-color: #00754a; border-color: #00754a;">Order Now</a>
+                        </div>
+                    `);
+                } else {
+                    $('#summary-card').show();
+                    var total = 0;
+                    cart.forEach(item => {
+                        total += item.price * item.quantity;
+                        var itemHtml = `
+                            <div class="card border-0 shadow-sm rounded-4 p-3 bg-white d-flex flex-row align-items-center gap-3 position-relative">
+                                <div class="cart-img-container">
+                                    <img src="${item.img}" alt="${item.name}">
+                                </div>
+                                <div class="flex-grow-1" style="padding-right: 25px;">
+                                    <h6 class="fw-bold mb-1 text-dark" style="font-size: 1.05rem;">${item.name}</h6>
+                                    <span class="text-success fw-bold" style="color: #00754a !important;">₹ ${(item.price * item.quantity).toFixed(2)}</span>
+                                </div>
+                                <div class="d-flex align-items-center gap-2 border rounded-pill px-2 py-1 bg-light">
+                                    <button class="qty-btn qty-decrease" data-name="${item.name}"><i class="fa-solid fa-minus" style="font-size: 0.8rem;"></i></button>
+                                    <span class="fw-bold px-1">${item.quantity}</span>
+                                    <button class="qty-btn qty-increase" data-name="${item.name}"><i class="fa-solid fa-plus" style="font-size: 0.8rem;"></i></button>
+                                </div>
+                                <button class="btn btn-sm text-danger border-0 p-0 position-absolute cart-remove-item" data-name="${item.name}" style="top: 15px; right: 15px;"><i class="fa-solid fa-trash-can" style="font-size: 1rem; opacity: 0.8;"></i></button>
+                            </div>
+                        `;
+                        listContainer.append(itemHtml);
+                    });
+
+                    $('#summary-subtotal').text('₹ ' + total.toFixed(2));
+                    $('#summary-total').text('₹ ' + total.toFixed(2));
+                }
+            }
+
+            renderCart();
+
+            function updateQuantity(name, change) {
+                var cart = JSON.parse(localStorage.getItem('starbucks_cart')) || [];
+                var item = cart.find(i => i.name === name);
+                if (item) {
+                    item.quantity += change;
+                    if (item.quantity <= 0) {
+                        cart = cart.filter(i => i.name !== name);
+                    }
+                }
+                localStorage.setItem('starbucks_cart', JSON.stringify(cart));
+                renderCart();
+                if (typeof window.updateCartBadge === 'function') {
+                    window.updateCartBadge();
+                }
+            }
+
+            $(document).on('click', '.qty-decrease', function() {
+                var name = $(this).data('name');
+                updateQuantity(name, -1);
+            });
+
+            $(document).on('click', '.qty-increase', function() {
+                var name = $(this).data('name');
+                updateQuantity(name, 1);
+            });
+
+            $(document).on('click', '.cart-remove-item', function() {
+                var name = $(this).data('name');
+                var cart = JSON.parse(localStorage.getItem('starbucks_cart')) || [];
+                cart = cart.filter(i => i.name !== name);
+                localStorage.setItem('starbucks_cart', JSON.stringify(cart));
+                renderCart();
+                if (typeof window.updateCartBadge === 'function') {
+                    window.updateCartBadge();
+                }
+            });
+
+            $(document).on('click', '#cartCheckoutBtn', function() {
+                window.location.href = 'payment.html';
+            });
+        });
+    </script>
+</body>
+</html>

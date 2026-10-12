@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Clone - Store Locator</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://www.starbucks.in/assets/icon/logo.png" type="image/png">
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top px-lg-5">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                
+                <img src="https://www.starbucks.in/assets/icon/logo.png" alt="Starbucks" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto ms-lg-4 mb-2 mb-lg-0 fw-bold header-links">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gift.html">Gift</a></li>
+                    <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="store.html">Store</a></li>
+                    <li class="nav-item"><a class="nav-link" href="corporate.html">Corporate Gifting</a></li>
+                </ul>
+
+
+
+            <div class="d-flex align-items-center gap-3">
+                    <div class="search-container position-relative">
+                        <input type="text" class="form-control rounded-pill search-input" placeholder="Looking for something specific?">
+                        <i class="fa fa-search position-absolute search-icon"></i>
+                    </div>
+                    <a href="profile.html" class="profile-icon"><i class="fa-regular fa-user fs-4 text-dark"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container-fluid mt-5 pt-4 ps-0">
+        <div class="row g-0 viewport-split">
+
+            
+            <div class="col-md-4 bg-white border-end p-4 sidebar-map">
+                <div class="search-container position-relative mb-4">
+                    
+
+                    <input type="text" class="form-control rounded-pill search-input" placeholder="Find a store near you">
+                    <i class="fa fa-search position-absolute search-icon"></i>
+                </div>
+                <div class="text-center py-5 container-empty-map">
+                    <div class="mb-3 text-muted">
+                        <i class="fa-solid fa-map-location-dot fs-1"></i>
+                    </div>
+
+
+                    <h6 class="fw-bold">Sorry! We can't seem to spot you.</h6>
+                    <p class="text-muted small">Please enable your location to find the nearest Starbucks.</p>
+                    <button class="btn btn-outline-success rounded-pill px-4 fw-bold btn-sm mt-2">Enter Location Manually</button>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

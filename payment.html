@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Starbucks Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://www.starbucks.in/assets/icon/logo.png" type="image/png">
+    <style>
+        .payment-option-card {
+            border: 2px solid rgb(242, 240, 235);
+            border-radius: 12px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: white;
+        }
+
+        .payment-option-card:hover {
+            border-color: var(--sb-clean-green);
+            box-shadow: 0 4px 12px rgba(0, 117, 74, 0.1);
+        }
+
+        .payment-option-card.selected {
+            border-color: var(--sb-clean-green);
+            background-color: rgb(242, 250, 246);
+            box-shadow: 0 4px 12px rgba(0, 117, 74, 0.15);
+        }
+
+        .payment-option-card .check-icon {
+            display: none;
+        }
+
+        .payment-option-card.selected .check-icon {
+            display: block;
+        }
+
+        .upi-app-option {
+            border: 1px solid rgb(242, 240, 235);
+            border-radius: 8px;
+            padding: 12px 16px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: white;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .upi-app-option:hover {
+            border-color: var(--sb-clean-green);
+            background-color: rgb(249, 247, 243);
+        }
+
+        .upi-app-option.selected {
+            border-color: var(--sb-clean-green);
+            background-color: rgb(242, 250, 246);
+        }
+
+        .upi-app-option .check-icon {
+            display: none;
+        }
+
+        .upi-app-option.selected .check-icon {
+            display: block;
+        }
+
+        .form-control:focus {
+            border-color: var(--sb-clean-green);
+            box-shadow: 0 0 0 0.2rem rgba(0, 117, 74, 0.15);
+        }
+
+        .payment-section {
+            display: none;
+        }
+
+        .payment-section.active {
+            display: block;
+        }
+
+        .thank-you-section {
+            display: none;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .thank-you-section.active {
+            display: block;
+        }
+
+        .thank-you-icon {
+            font-size: 5rem;
+            color: var(--sb-clean-green);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top px-lg-5">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://www.starbucks.in/assets/icon/logo.png" alt="Starbucks" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto ms-lg-4 mb-2 mb-lg-0 fw-bold header-links">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gift.html">Gift</a></li>
+                    <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
+                    <li class="nav-item"><a class="nav-link" href="store.html">Store</a></li>
+                    <li class="nav-item"><a class="nav-link" href="corporate.html">Corporate Gifting</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="search-container position-relative">
+                        <input type="text" class="form-control rounded-pill search-input"
+                            placeholder="Looking for something specific?">
+                        <i class="fa fa-search position-absolute search-icon"></i>
+                    </div>
+                    <a href="profile.html" class="profile-icon"><i class="fa-regular fa-user fs-4 text-dark"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5 py-5">
+        <div id="paymentContent">
+            <h3 class="fw-bold text-dark mb-4" style="color: #0d382c !important;">Select Payment Method</h3>
+
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <!-- Payment Options -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-4">
+                            <div class="payment-option-card" data-payment="online">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div>
+                                        <i class="fa-solid fa-mobile-screen-button fs-3 mb-2"
+                                            style="color: var(--sb-clean-green);"></i>
+                                        <h6 class="fw-bold mb-1">Online Payment</h6>
+                                        <p class="text-muted small mb-0">Pay via UPI apps</p>
+                                    </div>
+                                    <i class="fa-solid fa-circle-check check-icon fs-4"
+                                        style="color: var(--sb-clean-green);"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="payment-option-card" data-payment="card">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div>
+                                        <i class="fa-solid fa-credit-card fs-3 mb-2"
+                                            style="color: var(--sb-clean-green);"></i>
+                                        <h6 class="fw-bold mb-1">Card Payment</h6>
+                                        <p class="text-muted small mb-0">Credit/Debit card</p>
+                                    </div>
+                                    <i class="fa-solid fa-circle-check check-icon fs-4"
+                                        style="color: var(--sb-clean-green);"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="payment-option-card" data-payment="cash">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div>
+                                        <i class="fa-solid fa-money-bill-wave fs-3 mb-2"
+                                            style="color: var(--sb-clean-green);"></i>
+                                        <h6 class="fw-bold mb-1">Cash Payment</h6>
+                                        <p class="text-muted small mb-0">Pay at store/counter</p>
+                                    </div>
+                                    <i class="fa-solid fa-circle-check check-icon fs-4"
+                                        style="color: var(--sb-clean-green);"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="payment-section" id="onlineSection">
+                        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+                            <h5 class="fw-bold mb-3" style="color: #0d382c;">Select UPI App</h5>
+                            <div class="row g-2 mb-4">
+                                <div class="col-6 col-md-4">
+                                    <div class="upi-app-option" data-app="gpay">
+                                        <i class="fa-brands fa-google fs-4" style="color: #4285F4;"></i>
+                                        <span class="fw-semibold">Google Pay</span>
+                                        <i class="fa-solid fa-circle-check check-icon ms-auto fs-5"
+                                            style="color: var(--sb-clean-green);"></i>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="upi-app-option" data-app="phonepe">
+                                        <i class="fa-solid fa-mobile-screen fs-4" style="color: #5f259f;"></i>
+                                        <span class="fw-semibold">PhonePe</span>
+                                        <i class="fa-solid fa-circle-check check-icon ms-auto fs-5"
+                                            style="color: var(--sb-clean-green);"></i>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="upi-app-option" data-app="paytm">
+                                        <i class="fa-solid fa-wallet fs-4" style="color: #00baf2;"></i>
+                                        <span class="fw-semibold">Paytm</span>
+                                        <i class="fa-solid fa-circle-check check-icon ms-auto fs-5"
+                                            style="color: var(--sb-clean-green);"></i>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="upi-app-option" data-app="bhim">
+                                        <i class="fa-solid fa-indian-rupee-sign fs-4" style="color: #6a1b9a;"></i>
+                                        <span class="fw-semibold">BHIM</span>
+                                        <i class="fa-solid fa-circle-check check-icon ms-auto fs-5"
+                                            style="color: var(--sb-clean-green);"></i>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="upi-app-option" data-app="amazonpay">
+                                        <i class="fa-brands fa-amazon fs-4" style="color: #ff9900;"></i>
+                                        <span class="fw-semibold">Amazon Pay</span>
+                                        <i class="fa-solid fa-circle-check check-icon ms-auto fs-5"
+                                            style="color: var(--sb-clean-green);"></i>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="upi-app-option" data-app="other">
+                                        <i class="fa-solid fa-ellipsis fs-4" style="color: #666;"></i>
+                                        <span class="fw-semibold">Other UPI</span>
+                                        <i class="fa-solid fa-circle-check check-icon ms-auto fs-5"
+                                            style="color: var(--sb-clean-green);"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Enter UPI ID</label>
+                                <input type="text" class="form-control rounded-pill" id="upiId"
+                                    placeholder="example@upi">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payment-section" id="cardSection">
+                        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+                            <h5 class="fw-bold mb-3" style="color: #0d382c;">Card Details</h5>
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Card Number</label>
+                                <input type="text" class="form-control rounded-pill" id="cardNumber"
+                                    placeholder="1234 5678 9012 3456" maxlength="19">
+                            </div>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Expiry Date</label>
+                                    <input type="text" class="form-control rounded-pill" id="expiryDate"
+                                        placeholder="MM/YY" maxlength="5">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">CVV</label>
+                                    <input type="password" class="form-control rounded-pill" id="cvv" placeholder="123"
+                                        maxlength="3">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Cardholder Name</label>
+                                <input type="text" class="form-control rounded-pill" id="cardholderName"
+                                    placeholder="Name on card">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payment-section" id="cashSection">
+                        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+                            <h5 class="fw-bold mb-3" style="color: #0d382c;">Cash Payment Options</h5>
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold mb-2">Select Order Type</label>
+                                <div class="d-flex gap-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="orderType" id="takeaway"
+                                            value="takeaway" checked>
+                                        <label class="form-check-label" for="takeaway">Takeaway</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="orderType" id="dinein"
+                                            value="dinein">
+                                        <label class="form-check-label" for="dinein">Dine In</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="alert alert-info border-0 rounded-3"
+                                style="background-color: rgb(242, 250, 246);">
+                                <i class="fa-solid fa-info-circle me-2" style="color: var(--sb-clean-green);"></i>
+                                <span id="cashPaymentText" class="fw-semibold">Cash on delivery available for takeaway
+                                    orders</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+                        <h5 class="fw-bold mb-4" style="color: #0d382c;">Order Summary</h5>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-secondary">Subtotal</span>
+                            <span class="fw-semibold text-dark" id="summarySubtotal">₹ 0.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-secondary">Taxes & Charges</span>
+                            <span class="fw-semibold text-dark">₹ 0.00</span>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <span class="fw-bold text-dark fs-5">Total Amount</span>
+                            <span class="fw-bold fs-4 text-success" id="summaryTotal"
+                                style="color: #00754a !important;">₹ 0.00</span>
+                        </div>
+                        <button class="btn btn-success w-100 rounded-pill py-2.5 fw-bold"
+                            style="background-color: #00754a; border-color: #00754a;" id="processPaymentBtn">Process
+                            Payment</button>
+                        <a href="cart.html"
+                            class="btn btn-outline-secondary w-100 rounded-pill py-2.5 fw-bold mt-2">Back to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="thank-you-section" id="thankYouSection">
+            <div class="thank-you-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h2 class="fw-bold mb-3" style="color: #0d382c;">Thank you for ordering!</h2>
+            <p class="text-muted mb-4">Your order has been placed successfully.</p>
+            <div class="card border-0 shadow-sm rounded-4 p-4 bg-white d-inline-block" style="max-width: 400px;">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="text-secondary">Order Total</span>
+                    <span class="fw-bold fs-5 text-success" id="finalTotal" style="color: #00754a !important;">₹
+                        0.00</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="text-secondary">Payment Method</span>
+                    <span class="fw-semibold" id="finalPaymentMethod">-</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="text-secondary">Order ID</span>
+                    <span class="fw-semibold" id="orderId">#SB-000000</span>
+                </div>
+            </div>
+            <div class="mt-4">
+                <a href="order.html" class="btn btn-success rounded-pill px-4 py-2 fw-bold me-2"
+                    style="background-color: #00754a; border-color: #00754a;">Order More</a>
+                <a href="index.html" class="btn btn-outline-secondary rounded-pill px-4 py-2 fw-bold">Back to Home</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-deep-green text-white py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-2 col-md-3 text-center text-md-start">
+                    <img src="https://www.starbucks.in/assets/icon/logo.png" alt="Starbucks Logo"
+                        class="logo-img d-inline-block mx-auto mx-md-0">
+                </div>
+                <div class="col-lg-2 col-md-3">
+                    <h6 class="fw-bold mb-3 text-uppercase tracking-wider">About Us</h6>
+                    <ul class="list-unstyled footer-links m-0">
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Our Heritage</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Coffeehouse</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Our Company</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <h6 class="fw-bold mb-3 text-uppercase tracking-wider">Responsibility</h6>
+                    <ul class="list-unstyled footer-links m-0">
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Diversity</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Community</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Ethical Sourcing</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Environmental Stewardship</a>
+                        </li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Learn More</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Bonus Star</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3">
+                    <h6 class="fw-bold mb-3 text-uppercase tracking-wider">Legal</h6>
+                    <ul class="list-unstyled footer-links m-0">
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Disclaimer</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Food Safety</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Nutritional Details</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <h6 class="fw-bold mb-3 text-uppercase tracking-wider">Quick Links</h6>
+                    <ul class="list-unstyled footer-links m-0">
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">FAQs</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Customer Service</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Delivery</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Loyalty Program Terms and
+                                Conditions</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Starbucks India Mobile App Terms
+                                of Use</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Personalized Offer</a></li>
+                        <li><a href="store.html" class="d-block py-1 small text-decoration-none">Store Locator</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Protein Combos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var selectedPaymentMethod = null;
+            var selectedUpiApp = null;
+            var cart = JSON.parse(localStorage.getItem('starbucks_cart')) || [];
+
+            var total = 0;
+            cart.forEach(item => {
+                total += item.price * item.quantity;
+            });
+
+            $('#summarySubtotal').text('₹ ' + total.toFixed(2));
+            $('#summaryTotal').text('₹ ' + total.toFixed(2));
+            $('#finalTotal').text('₹ ' + total.toFixed(2));
+
+
+            $('.payment-option-card').on('click', function () {
+                $('.payment-option-card').removeClass('selected');
+                $(this).addClass('selected');
+                selectedPaymentMethod = $(this).data('payment');
+
+                $('.payment-section').removeClass('active');
+
+                if (selectedPaymentMethod === 'online') {
+                    $('#onlineSection').addClass('active');
+                } else if (selectedPaymentMethod === 'card') {
+                    $('#cardSection').addClass('active');
+                } else if (selectedPaymentMethod === 'cash') {
+                    $('#cashSection').addClass('active');
+                }
+            });
+
+
+            $('.upi-app-option').on('click', function () {
+                $('.upi-app-option').removeClass('selected');
+                $(this).addClass('selected');
+                selectedUpiApp = $(this).data('app');
+            });
+
+            $('input[name="orderType"]').on('change', function () {
+                var orderType = $(this).val();
+                if (orderType === 'takeaway') {
+                    $('#cashPaymentText').text('Cash on delivery available for takeaway orders');
+                } else {
+                    $('#cashPaymentText').text('Pay in counter for dine-in orders');
+                }
+            });
+
+            $('#processPaymentBtn').on('click', function () {
+                if (!selectedPaymentMethod) {
+                    alert('Please select a payment method');
+                    return;
+                }
+
+                if (selectedPaymentMethod === 'online') {
+                    if (!selectedUpiApp) {
+                        alert('Please select a UPI app');
+                        return;
+                    }
+                    var upiId = $('#upiId').val().trim();
+                    if (!upiId) {
+                        alert('Please enter your UPI ID');
+                        return;
+                    }
+                } else if (selectedPaymentMethod === 'card') {
+                    var cardNumber = $('#cardNumber').val().trim();
+                    var expiryDate = $('#expiryDate').val().trim();
+                    var cvv = $('#cvv').val().trim();
+                    var cardholderName = $('#cardholderName').val().trim();
+
+                    if (!cardNumber || !expiryDate || !cvv || !cardholderName) {
+                        alert('Please fill in all card details');
+                        return;
+                    }
+                }
+
+
+                var orderId = '#SB-' + Math.floor(Math.random() * 900000 + 100000);
+                $('#orderId').text(orderId);
+
+                var paymentMethodText = '';
+                if (selectedPaymentMethod === 'online') {
+                    paymentMethodText = 'Online (UPI)';
+                } else if (selectedPaymentMethod === 'card') {
+                    paymentMethodText = 'Card Payment';
+                } else if (selectedPaymentMethod === 'cash') {
+                    var orderType = $('input[name="orderType"]:checked').val();
+                    paymentMethodText = orderType === 'takeaway' ? 'Cash on Delivery' : 'Pay in Counter';
+                }
+                $('#finalPaymentMethod').text(paymentMethodText);
+
+                localStorage.setItem('starbucks_cart', JSON.stringify([]));
+
+                $('#paymentContent').hide();
+                $('#thankYouSection').addClass('active');
+            });
+
+            $('#cardNumber').on('input', function () {
+                var value = $(this).val().replace(/\s/g, '').replace(/\D/g, '');
+                var formatted = value.match(/.{1,4}/g)?.join(' ') || value;
+                $(this).val(formatted);
+            });
+
+            $('#expiryDate').on('input', function () {
+                var value = $(this).val().replace(/\D/g, '');
+                if (value.length >= 2) {
+                    value = value.substring(0, 2) + '/' + value.substring(2);
+                }
+                $(this).val(value);
+            });
+        });
+    </script>
+</body>
+
+</html>

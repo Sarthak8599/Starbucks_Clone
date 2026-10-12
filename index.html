@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://www.starbucks.in/assets/icon/logo.png" type="image/png">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fi px-lxed-topg-5">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+               
+
+                <img src="https://www.starbucks.in/assets/icon/logo.png" alt="" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto ms-lg-4 mb-2 mb-lg-0 fw-bold header-links">
+
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gift.html">Gift</a></li>
+                    <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
+                    <li class="nav-item"><a class="nav-link" href="store.html">Store</a></li>
+                    <li class="nav-item"><a class="nav-link" href="corporate.html">Corporate Gifting</a></li>
+
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="search-container position-relative">
+                        <input type="text" class="form-control rounded-pill search-input" placeholder="Looking for something specific">
+                        <i class="fa fa-search position-absolute search-icon"></i>
+                </div>
+                    <a href="profile.html" class="profile-icon"><i class="fa-regular fa-user fs-4 text-dark"></i></a>
+                </div>
+        </div>
+        </div>
+    </nav>
+
+    <section class="hero-section container mt-5 pt-5">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner rounded-4 shadow-sm">
+
+                <div class="carousel-item active">
+                    <div class="promo-card-banner rounded-4 overflow-hidden position-relative d-flex align-items-center" style="background: linear-gradient(135deg, #f5e6c8 0%, #f0d08a 40%, #e9bf60 70%, #d4a830 100%); min-height: 180px;">
+                        
+                        <div class="position-absolute" style="left: -10px; bottom: 0; height: 110%; width: auto; z-index: 1;">
+                            <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/100399.jpg" alt="Blonde Roast" style="height: 100%; width: auto; object-fit: contain; filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.2));" onerror="this.style.display='none'">
+                        </div>
+                       
+                        <div class="ms-auto d-flex align-items-center justify-content-between w-100 ps-5 pe-4 py-4" style="padding-left: 220px !important;">
+                            <div>
+                                <span class="badge bg-white text-dark fw-semibold mb-2 px-3 py-1 rounded-pill" style="font-size: 0.75rem;">New</span>
+                                <h3 class="fw-bold text-dark mb-2" style="font-size: 1.5rem;">Try the Blonde Roast!</h3>
+                                <p class="text-dark mb-0" style="font-size: 0.9rem; opacity: 0.75;">Bright, sweet citrus notes and a smooth body makes this a classic.</p>
+                            </div>
+                            <div class="ms-4 flex-shrink-0">
+                                <a href="order.html" class="btn btn-dark rounded-pill px-4 py-2 fw-bold" style="background-color: #1e3932; border-color: #1e3932; font-size: 0.9rem;">Know More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="promo-card-banner rounded-4 overflow-hidden position-relative d-flex align-items-center" style="background: linear-gradient(135deg, #c8e6c9 0%, #81c784 40%, #4caf50 70%, #2e7d32 100%); min-height: 180px;">
+
+                        <div class="position-absolute" style="left: -10px; bottom: 0; height: 110%; width: auto; z-index: 1;">
+                            <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/100501.jpg" alt="Summer Drink" style="height: 100%; width: auto; object-fit: contain; filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.2));" onerror="this.style.display='none'">
+                        </div>
+                        
+                        <div class="ms-auto d-flex align-items-center justify-content-between w-100 ps-5 pe-4 py-4" style="padding-left: 220px !important;">
+                            <div>
+                                <span class="badge bg-white text-dark fw-semibold mb-2 px-3 py-1 rounded-pill" style="font-size: 0.75rem;">New Arrival</span>
+                                <h3 class="fw-bold text-white mb-2" style="font-size: 1.5rem;">Beat the Heat!</h3>
+                                <p class="text-white mb-0" style="font-size: 0.9rem; opacity: 0.85;">Beat the heat with our refreshing summer drinks. Explore seasonal specials.</p>
+                        </div>
+
+                            <div class="ms-4 flex-shrink-0">
+                                <a href="order.html" class="btn btn-light rounded-pill px-4 py-2 fw-bold text-dark" style="font-size: 0.9rem;">Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" style="width: 40px; left: -50px;">
+                <span class="carousel-control-prev-icon" style="filter: invert(1) brightness(0);"></span>
+
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" style="width: 40px; right: -50px;">
+                <span class="carousel-control-next-icon" style="filter: invert(1) brightness(0);"></span>
+            </button>
+        </div>
+    </section>
+
+    
+    
+
+    <section class="container my-5">
+        <h4 class="fw-bold mb-4">Handcrafted Curations</h4>
+        <div class="row text-center row-cols-2 row-cols-sm-3 row-cols-md-6 g-4">
+            <div class="col curation-item">
+                <a href="order.html?category=bestseller" class="text-decoration-none text-dark d-block">
+                    <div class="curation-circle mx-auto mb-2">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Category/Small/Bestseller.jpg" alt="Bestseller">
+                    </div>
+                    <p class="fw-semibold small mb-0">Bestseller</p>
+                </a>
+            </div>
+            <div class="col curation-item">
+                <a href="order.html?category=drinks" class="text-decoration-none text-dark d-block">
+                    <div class="curation-circle mx-auto mb-2">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Category/Small/Drinks.jpg" alt="Drinks">
+                    </div>
+                    <p class="fw-semibold small mb-0">Drinks</p>
+                </a>
+            </div>
+
+            <div class="col curation-item">
+                <a href="order.html?category=food" class="text-decoration-none text-dark d-block">
+                    <div class="curation-circle mx-auto mb-2">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Category/Small/Food.jpg" alt="Food">
+                    </div>
+                    <p class="fw-semibold small mb-0">Food</p>
+                </a>
+            </div>
+
+            <div class="col curation-item">
+                <a href="order.html?category=merchandise" class="text-decoration-none text-dark d-block">
+                    <div class="curation-circle mx-auto mb-2">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Category/Small/Merchandise.jpg" alt="Merchandise">
+                    </div>
+                    <p class="fw-semibold small mb-0">Merchandise</p>
+                </a>
+            </div>
+
+            <div class="col curation-item">
+                <a href="order.html?category=coffee-at-home" class="text-decoration-none text-dark d-block">
+                    <div class="curation-circle mx-auto mb-2">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Category/Small/CoffeeAtHome.jpg" alt="Coffee At Home">
+                    </div>
+                    <p class="fw-semibold small mb-0">Coffee At Home</p>
+                </a>
+            </div>
+
+            <div class="col curation-item">
+                <a href="order.html?category=ready-to-eat" class="text-decoration-none text-dark d-block">
+                    <div class="curation-circle mx-auto mb-2">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Category/Small/ReadyToEat.jpg" alt="Ready to Eat">
+                    </div>
+                    <p class="fw-semibold small mb-0">Ready to Eat</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5 bg-light p-4 rounded-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4 class="fw-bold m-0">Barista Recommends</h4>
+            <a href="order.html" class="text-success fw-bold text-decoration-none small">View Menu</a>
+        </div>
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card product-card border-0 shadow-sm p-3 rounded-4">
+                    <div class="d-flex gap-3 align-items-center">
+                        
+
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/webP/100501.webp" alt="Java Chip Frappuccino" class="product-img rounded-3">
+                        <div>
+                            <span class="veg-icon"><i class="fa-solid fa-square-caret-up text-success"></i></span>
+                            <h6 class="fw-bold mb-1 mt-1">Java Chip Frappuccino</h6>
+                            <small class="text-muted d-block">TALL (354 ML) · 657 kcal</small>
+                    </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="fw-bold">₹ 456.75</span>
+                        <button class="btn btn-success btn-sm rounded-pill px-3 fw-bold btn-add">Add Item</button>
+                    </div>
+                </div>
+    </div>
+
+            <div class="col-md-4">
+                <div class="card product-card border-0 shadow-sm p-3 rounded-4">
+                    <div class="d-flex gap-3 align-items-center">
+
+                       
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/100405.jpg" alt="Caramel Macchiato" class="product-img rounded-3">
+                        <div>
+                            <span class="veg-icon"><i class="fa-solid fa-square-caret-up text-success"></i></span>
+                            <h6 class="fw-bold mb-1 mt-1">Caramel Macchiato</h6>
+                            <small class="text-muted d-block">TALL (354 ML) · 250 kcal</small>
+                        </div>
+
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="fw-bold">₹ 425.00</span>
+                        <button class="btn btn-success btn-sm rounded-pill px-3 fw-bold btn-add">Add Item</button>
+                    </div>
+                </div>
+            </div>
+
+           
+
+        </div>
+    </section>
+
+    <section class="container my-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4 class="fw-bold m-0">Learn more about the world of coffee!</h4>
+            <a href="#" class="text-success fw-bold text-decoration-none small">Discover More</a>
+        </div>
+        <div class="coffee-culture-card rounded-4 p-5 position-relative overflow-hidden shadow-sm" style="min-height: 350px; background-color: #1e3932;">
+       
+
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background: url('https://media.licdn.com/dms/image/v2/C4D1BAQHh8a9qIE9qzg/company-background_1536_768/company-background_1536_768/0/1583298281391?e=2147483647&v=beta&t=-mzbERJXWmRVJN1-kcR7oSlNlHuol7RXswNAP4vv630') center/cover no-repeat; z-index: 0; opacity: 0.8;"></div>
+            
+            <div class="position-relative z-1 d-flex flex-column align-items-start justify-content-center h-100 w-100">
+                <span class="badge rounded-pill bg-success-subtle text-success px-3 py-2 mb-3 fw-semibold">Coffee Culture</span>
+                <h2 class="fw-bold display-6 mb-2 text-white">Art & Science Of Coffee Brewing</h2>
+                <p class="text-white-50 mb-4" style="max-width: 600px;">Master the perfect brew with Starbucks! Learn the art and science of coffee brewing.</p>
+                <a href="#" class="btn btn-light rounded-pill px-4 py-2 fw-bold text-dark">Learn More</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="container my-5 text-center text-muted small disclaimer-section">
+        <p class="mb-1">An average active adult requires 2,000 kcal energy per day, however, calorie needs may vary.</p>
+
+        <p class="mb-1 text-secondary">Image for representation purpose only.</p>
+        <p class="mb-0 text-secondary">FSSAI Lic. No. 10015022003601</p>
+    </section>
+
+    
+    <footer class="bg-deep-green text-white py-5 mt-5 " style="color:#85d188">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-2 col-md-3 text-center text-md-start">
+                    <img src="https://www.starbucks.in/assets/icon/logo.png" alt="Starbucks Logo" class="logo-img d-inline-block mx-auto mx-md-0">
+                </div>
+                <div class="col-lg-2 col-md-3">
+                    <h6 class="fw-bold mb-3 text-uppercase tracking-wider" style="color:#fff;">About Us</h6>
+                    <ul class="list-unstyled footer-links-teal m-0">
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Our Heritage</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Coffeehouse</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Our Company</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <h6 class="fw-bold mb-3 text-uppercase tracking-wider" style="color:#fff;">Responsibility</h6>
+                    <ul class="list-unstyled footer-links-gold m-0">
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Diversity</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Community</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Ethical Sourcing</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Environmental Stewardship</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Learn More</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Bonus Star</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-lg-2 col-md-3">
+                    <h6 class="fw-bold mb-3 text-uppercase tracking-wider" style="color:#fff;">Legal</h6>
+                    <ul class="list-unstyled footer-links-teal m-0">
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Disclaimer</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Food Safety</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Nutritional Details</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <h6 class="fw-bold mb-3 text-uppercase tracking-wider" style="color:#fff;">Quick Links</h6>
+                    <ul class="list-unstyled footer-links-teal m-0">
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">FAQs</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Customer Service</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Delivery</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Loyalty Program Terms and Conditions</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Starbucks India Mobile App Terms of Use</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Personalized offer</a></li>
+                        <li><a href="store.html" class="d-block py-1 small text-decoration-none">Store Names</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Protein Combos</a></li>
+                        <li><a href="#" class="d-block py-1 small text-decoration-none">Cookie Policy</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+        $(document).ready(function() {
+            if ($('.wishlist-icon').length === 0) {
+                var wishlistIconHtml = `
+                    <a href="wishlist.html" class="wishlist-icon position-relative text-dark me-2" style="text-decoration: none;">
+                        <i class="fa-regular fa-heart fs-4"></i>
+                        <span class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle wishlist-badge" style="font-size: 0.65rem; display: none;">0</span>
+                    </a>
+                `;
+                if ($('.cart-icon').length > 0) {
+                    $('.cart-icon').before(wishlistIconHtml);
+                } else if ($('.profile-icon').length > 0) {
+                    $('.profile-icon').before(wishlistIconHtml);
+                }
+            }
+
+            function getWishlist() {
+                return JSON.parse(localStorage.getItem('starbucks_wishlist')) || [];
+            }
+
+            function saveWishlist(wishlist) {
+                localStorage.setItem('starbucks_wishlist', JSON.stringify(wishlist));
+                updateWishlistBadge();
+            }
+
+            function updateWishlistBadge() {
+                var wishlist = getWishlist();
+                if (wishlist.length > 0) {
+                    $('.wishlist-badge').text(wishlist.length).show();
+                } else {
+                    $('.wishlist-badge').hide();
+                }
+            }
+
+            var wishlist = getWishlist();
+            
+            $('.menu-card, .product-card, .card-gift').each(function() {
+                var card = $(this);
+                if (card.find('.btn-wishlist').length === 0) {
+                    var name = "";
+                    if (card.hasClass('menu-card')) {
+                        name = card.find('.menu-card-title').text().trim();
+                    } else if (card.hasClass('product-card')) {
+                        name = card.find('h6').text().trim();
+                    } else if (card.hasClass('card-gift')) {
+                        name = card.find('h6').text().trim();
+                    }
+
+                    if (name) {
+                        var inWishlist = wishlist.some(item => item.name === name);
+                        var heartClass = inWishlist ? 'fa-solid fa-heart text-danger' : 'fa-regular fa-heart text-secondary';
+                        card.css('position', 'relative').prepend(`
+                            <button class="btn-wishlist position-absolute border-0 bg-transparent p-0" data-name="${name}" style="top: 15px; right: 15px; z-index: 5; line-height: 1;">
+                                <i class="${heartClass} fs-5"></i>
+                            </button>
+                        `);
+                    }
+                }
+            });
+
+            updateWishlistBadge();
+
+            $(document).on('click', '.btn-wishlist', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var btn = $(this);
+                var name = btn.data('name');
+                var wishlist = getWishlist();
+                var index = wishlist.findIndex(item => item.name === name);
+                var heartIcon = btn.find('i');
+
+                if (index > -1) {
+                    wishlist.splice(index, 1);
+                    heartIcon.removeClass('fa-solid fa-heart text-danger').addClass('fa-regular fa-heart text-secondary');
+                } else {
+                    var price = 500.00;
+                    var img = "";
+                    
+                    var menuCard = btn.closest('.menu-card');
+                    if (menuCard.length > 0) {
+                        var priceText = menuCard.find('.menu-card-price').text();
+                        price = parseFloat(priceText.replace(/[^\d.]/g, '')) || 0;
+                        img = menuCard.find('.menu-card-img-circle img').attr('src');
+                    } 
+                    else {
+                        var productCard = btn.closest('.product-card');
+                        if (productCard.length > 0) {
+                            var priceText = productCard.find('.fw-bold').first().text();
+                            price = parseFloat(priceText.replace(/[^\d.]/g, '')) || 0;
+                            img = productCard.find('.product-img').attr('src');
+                        }
+                        else {
+                            var giftCard = btn.closest('.card-gift');
+                            if (giftCard.length > 0) {
+                                img = giftCard.find('.gift-banner-img').attr('src');
+                            }
+                        }
+                    }
+
+                    wishlist.push({
+                        name: name,
+                        price: price,
+                        img: img || 'https://www.starbucks.in/assets/icon/logo.png'
+                    });
+                    heartIcon.removeClass('fa-regular fa-heart text-secondary').addClass('fa-solid fa-heart text-danger');
+                }
+
+                saveWishlist(wishlist);
+            });
+        });
+    </script>
+</body>
+</html>

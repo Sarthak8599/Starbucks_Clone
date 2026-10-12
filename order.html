@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Clone - Order Menu</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://www.starbucks.in/assets/icon/logo.png" type="image/png">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top px-lg-5">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://www.starbucks.in/assets/icon/logo.png" alt="Starbucks" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto ms-lg-4 mb-2 mb-lg-0 fw-bold header-links">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gift.html">Gift</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="order.html">Order</a></li>
+                    <li class="nav-item"><a class="nav-link" href="store.html">Store</a></li>
+                    <li class="nav-item"><a class="nav-link" href="corporate.html">Corporate Gifting</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="search-container position-relative">
+                        <input type="text" class="form-control rounded-pill search-input" placeholder="Looking for something specific?">
+                        <i class="fa fa-search position-absolute search-icon"></i>
+                    </div>
+                    <a href="profile.html" class="profile-icon"><i class="fa-regular fa-user fs-4 text-dark"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="bg-light-bg py-2 mt-5 pt-4">
+        <div class="container px-3 px-lg-5">
+        </div>
+    </div>
+
+    
+    <div class="order-bar">
+        <div class="container px-3 px-lg-5 d-flex justify-content-between align-items-center flex-wrap gap-3">
+            
+            <div class="delivery-toggle-container">
+                <div class="delivery-toggle-bg">
+                    <button class="delivery-btn" id="btnDineIn">
+                        Dine-In
+                    </button>
+                    <button class="delivery-btn active" id="btnTakeaway">
+                        Takeaway
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="sticky-top-after-nav">
+        <div class="container px-3 px-lg-5">
+            
+            <div class="category-bar-container">
+                <a href="#" class="category-link active" data-category="newly-launched">Newly Launched</a>
+                <span class="category-pipe">|</span>
+                <a href="#" class="category-link" data-category="bestseller">Bestseller</a>
+                <span class="category-pipe">|</span>
+                <a href="#" class="category-link" data-category="drinks">Drinks</a>
+                <span class="category-pipe">|</span>
+                <a href="#" class="category-link" data-category="food">Food</a>
+                <span class="category-pipe">|</span>
+                <a href="#" class="category-link" data-category="merchandise">Merchandise</a>
+                <span class="category-pipe">|</span>
+                <a href="#" class="category-link" data-category="coffee-at-home">Coffee At Home</a>
+                <span class="category-pipe">|</span>
+                <a href="#" class="category-link" data-category="ready-to-eat">Ready to Eat</a>
+                <span class="category-pipe">|</span>
+                <a href="#" class="category-link" data-category="power-picks">Power Picks</a>
+            </div>
+        </div>
+    </div>
+
+    
+    <main class="container px-3 px-lg-5 my-5">
+        <div class="mb-4">
+            <h4 class="fw-bold mb-1" id="menu-category-title">Newly Launched</h4>
+        </div>
+
+        
+        <div class="category-section" id="section-newly-launched">
+            <div class="menu-cards-grid">
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/118282.jpg" alt="Iced Mango Matcha">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Iced Mango Matcha</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">Kcal - 120 per serving · Tall (354 mL)</small>
+                        </div>
+                        <p class="menu-card-desc">Milk and Alphonso mango fruit squash shaken over ice and top..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 414.15</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/118278.jpg" alt="Alphonso Mango Cold Brew">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Alphonso Mango Cold Brew</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">Kcal - 140 per serving · Tall (354 mL)</small>
+                        </div>
+                        <p class="menu-card-desc">A sparkling cold brew layered over mango-flavoured jelly. Soda and Alphonso mango squa...</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 395.15</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/118285.jpg" alt="Match Day Brownie">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Sparkling Pineapple Cold Brew</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">82 kcal SHORT(SHORT (237 ml) ) .82 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">Sparkling soda infused with pineapple syrup, topped with sig..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 393.75</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/118292.jpg" alt="Iced Peach Green Tea">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Tall Iced Shaken Espresso with Vanilla Protei..</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">211 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">Signature Starbucks brown sugar iced shaken espresso, curate..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 420.00</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/118274.jpg" alt="Chocolate Croissant">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Alphonso Mango Frappuccino</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">486 kcal TALL(TALL (354 ml) ) .486 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">A coffee-free, multi-layered Frappuccino crafted with Alphon...</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 535.00</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="category-section" id="section-bestseller" style="display: none;">
+            <div class="menu-cards-grid">
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/100419.jpg" alt="">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Cappuccino</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">HORT(237 ml) .104 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">Dark, Rich in flavour espresso lies in wait under a smoothed..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 336.00</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/103515.jpg" alt="">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Cafe Latte</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">TALL(354 ml) .344 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">Rich mocha-flavored sauce meets up with chocolaty chips, mil..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 447.75</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/100433.jpg" alt="">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Caffe Americano</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">SHORT(237 mL) .0 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">Rich in flavour, full-bodied espresso with hot water in true..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 325.00</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/100501.jpg" alt="">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Java Chip Frappuccino kcal</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">TALL(354 ml) .329 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">Mocha sauce and Frappuccino® chips blended with with Frappu..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 456.75</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/105468.jpg" alt="">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Cold coffee</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">ALL(354 ml) .354 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">Everybody’s favourite indulgence. Crafted expertly with prem..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 414.75</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/webP/100419.webp" alt="Americano">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Americano</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">Kcal - 15 per serving · Tall (354 mL)</small>
+                        </div>
+                        <p class="menu-card-desc">Rich espresso with hot water for a bold flavor.</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 280.00</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="category-section" id="section-drinks" style="display: none;">
+            <div class="menu-cards-grid">
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/M116547.jpg" alt="">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Hazelnut Oat Iced Shaken Espresso</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">TALL(354 ml) .120 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">Double shot of Signature Starbucks blonde roast paired with ..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 367.00 </span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/115790.png" alt="">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Tamrind Shikanji Cold brew</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">SHORT(237 ml) .55 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">A must try fusion — Starbucks Tamarind Shikanji Cold Brew p..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 393.75</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/118292.jpg" alt="">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Iced Caramel Macchiato</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">211 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">Signature Starbucks brown sugar iced shaken espresso, curate..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 420.00</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/113849.png" alt="">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Iced Belgium Chocolate Latte</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">311 kcal TALL(354 ml) .311 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">Espresso with decadent Belgian chocolate sauce, mocha sauce ..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 498.75</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/103973.jpg" alt="">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Honey Almond Flat White</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">SHORT(237 ml) .89 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">Your daily cup of coffee gets even better in our Plant-Based Almond special, sweetened with Honey</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 435.75</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/107329.jpg" alt="">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Hazelnut Oat Cortado</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">69 kcal </small>
+                        </div>
+                        <p class="menu-card-desc">Intense Ristretto shots infused with warm Hazelnut notes, your favourite coffee forward compact cup in an all-new Plant-Based Oat avatar.</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 435.75</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/100433.jpg" alt="">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Caffe Americano</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">SHORT(237 mL) .0 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">Rich in flavour, full-bodied espresso with hot water in true European style.</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 325.75</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/100377.jpg" alt="">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Honey Almond Flat White</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">SHORT(237 ml) .104 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">Our dark, Rich in flavour espresso balanced with steamed milk and a light layer of foam. A perfect coffee warm up.</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 336.00</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="category-section" id="section-food" style="display: none;">
+            <div class="menu-cards-grid">
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/117700.png" alt="Avocado Panini Sandwich">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Avocado Panini Sandwich</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">Per Serve (203g) - 490.3 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">Avocado slices, buffalo mozzarella cheese, rocket leaves, an..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 472.50</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/117699.png" alt="Grilled Paneer Cubano">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Grilled Paneer Cubano</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">Per Serve (268g) - 1009 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">Grilled paneer with chimichurri, smoked tomato chutney, pick..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 309.75</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/117678.png" alt="Chicken Ham Croissant Sandwich">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Chicken Ham Croissant Sandwich</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">Per Serve (215g) - 649.94 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">A croissant sandwich with grilled chicken and herb tossed ch..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 367.50</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/117679.png" alt="Pepper Chicken Bahn mi">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Pepper Chicken Bahn mi</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">Per Serve (225g) - 528.9 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">A pepper fry chicken, caramelised onion, curry leaf mayonnai..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 409.50</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                
+    
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/118262.jpg" alt="Green Mango Chicken Wrap">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Green Mango Chicken Wrap</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">Per Serve (190g) - 461 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">Summer is back at Starbucks! Green mangoes, grilled chicken,..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 367.50</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/117697.png" alt="Mushroom Bahn Mi">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Mushroom Bahn Mi</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">Per Serve (215g) - 478.8 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">A mushroom ragout, mushroom pate, pickled veggies and leafy ..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 393.75</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/117683.png" alt="Irani Chicken Kheema Wrap">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Irani Chicken Kheema Wrap</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">Per Serve (206g) - 425.78 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">Irani style cooked chicken kheema, with a mint chutney chees..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 325.50</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        
+        <div class="category-section" id="section-merchandise" style="display: none;">
+            <div class="menu-cards-grid">
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/M118407.jpg" alt="Classic Ceramic Green Mug">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Football Glass Bearista Cold Cup 591 ml</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;"></small>
+                        </div>
+                        <p class="menu-card-desc">Meet our Bearista Glass Cold Cup again! This time, it’s inspired by The World Football Tournament & comes with a unique lid that visualizes a football.</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 4250.00</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="category-section" id="section-coffee-at-home" style="display: none;">
+            <div class="menu-cards-grid">
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/A117261.png" alt="Italian Roast 150 G">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Italian Roast 150 G</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;"></small>
+                        </div>
+                        <p class="menu-card-desc">Italian Roast is our quintessential dark roast, inspired by ..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 650.00</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/A117435.png" alt="Karadibetta Estate 150 G">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Karadibetta Estate 150 G</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;"></small>
+                        </div>
+                        <p class="menu-card-desc">This Indian specialty coffee captures the vibrant spirit of ..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 495.00</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/A117263.png" alt="Sumatra 150 G">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Sumatra 150 G</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;"></small>
+                        </div>
+                        <p class="menu-card-desc">Sumatra is a truly distinctive single-origin coffee, known f..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 650.00</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/A117260.png" alt="India Estates Blend 150 G">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">India Estates Blend 150 G</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;"></small>
+                        </div>
+                        <p class="menu-card-desc">Grown on the gently sloping hills of Karnataka near Chikmaga..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 495.00</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/A117436.png" alt="Margolly Estate 150 G">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Margolly Estate 150 G</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;"></small>
+                        </div>
+                        <p class="menu-card-desc">This Indian specialty coffee celebrates rich biodiversity an..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 495.00</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/102823_1.jpg" alt="Kenya">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Kenya</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;"></small>
+                        </div>
+                        <p class="menu-card-desc">Beloved, like the elephant that symbolizes it. Bold, like th..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 1100.00</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/102825_1.jpg" alt="Sumatra">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Sumatra</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;"></small>
+                        </div>
+                        <p class="menu-card-desc">It has a full, buttery body with virtually no acidity, so th..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 1100.00</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/W101539.png" alt="Via Columbia Ready Brew">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Via Columbia Ready Brew</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;"></small>
+                        </div>
+                        <p class="menu-card-desc">This columbian marvel erupts on the palate what a juicy feel..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 530.00</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/W100744.png" alt="Via Italian Ready Brew">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Via Italian Ready Brew</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;"></small>
+                        </div>
+                        <p class="menu-card-desc">Now you can enjoy our bold and roasty - Italian Roast in an ..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 530.00</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="category-section" id="section-ready-to-eat" style="display: none;">
+            <div class="menu-cards-grid">
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/116883.png" alt="Roasted  Salted Cashew 50 gms">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Roasted  Salted Cashew 50 gms</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">Kcal - 152 per serve Serving Size - 25g (Net weight - 50g)</small>
+                        </div>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 190.00</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/116810.png" alt="Salted Almond Chocolate Bites -50Gm">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Salted Almond Chocolate Bites -50Gm</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">Kcal - 146 per serve Serving Size - 25g (Net weight - 50g)</small>
+                        </div>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 195.00</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/116807.png" alt="Almond Biscotti - 50g">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Almond Biscotti - 50g</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">Kcal - 102 per serve Serving Size - 25g (Net weight - 50g)</small>
+                        </div>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 180.00</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/116882.png" alt="Roasted &amp; Salted Almond 50 gms">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Roasted &amp; Salted Almond 50 gms</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">Kcal - 158 per serve Serving Size - 25g (Net weight - 50g)</small>
+                        </div>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 190.00</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="category-section" id="section-power-picks" style="display: none;">
+            <div class="menu-cards-grid">
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/117864.png" alt="Short Hazelnut Flat White Unsweetened">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Short Hazelnut Flat White Unsweetened</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">104 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">Signature Starbucks Flat white paired zero sugar hazelnut fl..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 441.00</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/115790.png" alt="Tamrind Shikanji Cold brew">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Tamrind Shikanji Cold brew</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">SHORT(237 ml) - 55 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">A must try fusion — Starbucks Tamarind Shikanji Cold Brew p..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 393.75</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/118292.jpg" alt="Tall Iced Shaken Espresso with Vanilla Protei..">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Tall Iced Shaken Espresso with Vanilla Protei..</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">211 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">Signature Starbucks brown sugar iced shaken espresso, curate..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 420.00</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                
+            
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/116732.png" alt="Mango Dragonfruit Refresher">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Mango Dragonfruit Refresher</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">SHORT(237 ml) - 62 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">Crafted with a combination of vibrant mango and refreshing d..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 362.25</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/117861.png" alt="Tall Iced Caramel Latte Unsweetneed">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Tall Iced Caramel Latte Unsweetneed</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">122 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">Starbucks Signature Iced Latte with elevated with zero sugar..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 441.00</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/116799.png" alt="Zesty Orange Cold Brew">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <div class="menu-card-badge-row">
+                                <span class="badge bg-success" style="font-size: 0.6rem; padding: 0.2rem 0.4rem;">New Launch</span>
+                            </div>
+                            <h6 class="menu-card-title">Zesty Orange Cold Brew</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">SHORT(Short Zesty Orange Cold Brew) - 52 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">Experience the smooth intensity of our cold brew, perfectly ..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 383.25</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/118278.jpg" alt="Alphonso Mango Cold Brew">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Alphonso Mango Cold Brew</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">SHORT(SHORT (237 ml)) - 61 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">A sparkling cold brew layered over mango-flavoured jelly. So..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 393.75</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                <div class="menu-card">
+                    <div class="menu-card-img-circle">
+                        <img src="https://starbucksstatic.cognizantorderserv.com/Items/Small/100419.jpg" alt="Cappuccino">
+                    </div>
+                    <div class="menu-card-content">
+                        <div class="menu-card-header">
+                            <h6 class="menu-card-title">Cappuccino</h6>
+                            <small class="text-muted d-block" style="font-size: 0.68rem; margin-top: 2px;">SHORT(237 ml) - 104 kcal</small>
+                        </div>
+                        <p class="menu-card-desc">Dark, Rich in flavour espresso lies in wait under a smoothed..</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">₹ 336.00</span>
+                            <button class="btn-add-item login-trigger">Add Item</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    
+    <div class="modal fade" id="locationModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="locationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center border-0 p-4 rounded-4 shadow">
+                <div class="modal-body">
+                    <div class="mb-3 text-warning">
+                        <i class="fa-solid fa-wand-magic-sparkles fs-1"></i>
+                    </div>
+                    <h5 class="fw-bold mb-3" id="locationModalLabel">Please turn on Location Service</h5>
+                    <p class="text-muted small">Allow "Starbucks" to determine your location in browser settings.</p>
+                    <button type="button" class="btn btn-dark w-100 rounded-pill py-2 fw-bold mt-3" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 p-4 rounded-4 shadow">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="fw-bold m-0" id="loginModalLabel">Login / Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <label class="form-label text-muted small fw-semibold">MOBILE NUMBER</label>
+                    
+                    <div class="input-group mb-4" style="border-bottom: 1px solid #dee2e6;">
+                        <span class="input-group-text bg-transparent border-0">+91</span>
+                        <input type="tel"
+                               class="form-control border-0 px-1"
+                               placeholder="Enter Mobile Number to continue"
+                               maxlength="10"
+                               inputmode="numeric">
+                    </div>
+                    
+                    <button class="btn btn-secondary w-100 rounded-pill py-2 fw-bold mb-3 disabled continue-btn">Continue</button>
+                    <div class="text-center">
+                        <a href="#" class="text-success small fw-bold text-decoration-none" data-bs-dismiss="modal">Continue as Guest</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+        $(document).ready(function() {
+            if ($('.wishlist-icon').length === 0) {
+                var wishlistIconHtml = `
+                    <a href="wishlist.html" class="wishlist-icon position-relative text-dark me-2" style="text-decoration: none;">
+                        <i class="fa-regular fa-heart fs-4"></i>
+                        <span class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle wishlist-badge" style="font-size: 0.65rem; display: none;">0</span>
+                    </a>
+                `;
+                if ($('.cart-icon').length > 0) {
+                    $('.cart-icon').before(wishlistIconHtml);
+                } else if ($('.profile-icon').length > 0) {
+                    $('.profile-icon').before(wishlistIconHtml);
+                }
+            }
+
+            function getWishlist() {
+                return JSON.parse(localStorage.getItem('starbucks_wishlist')) || [];
+            }
+
+            function saveWishlist(wishlist) {
+                localStorage.setItem('starbucks_wishlist', JSON.stringify(wishlist));
+                updateWishlistBadge();
+            }
+
+            function updateWishlistBadge() {
+                var wishlist = getWishlist();
+                if (wishlist.length > 0) {
+                    $('.wishlist-badge').text(wishlist.length).show();
+                } else {
+                    $('.wishlist-badge').hide();
+                }
+            }
+
+            var wishlist = getWishlist();
+            
+            $('.menu-card, .product-card, .card-gift').each(function() {
+                var card = $(this);
+                if (card.find('.btn-wishlist').length === 0) {
+                    var name = "";
+                    if (card.hasClass('menu-card')) {
+                        name = card.find('.menu-card-title').text().trim();
+                    } else if (card.hasClass('product-card')) {
+                        name = card.find('h6').text().trim();
+                    } else if (card.hasClass('card-gift')) {
+                        name = card.find('h6').text().trim();
+                    }
+
+                    if (name) {
+                        var inWishlist = wishlist.some(item => item.name === name);
+                        var heartClass = inWishlist ? 'fa-solid fa-heart text-danger' : 'fa-regular fa-heart text-secondary';
+                        card.css('position', 'relative').prepend(`
+                            <button class="btn-wishlist position-absolute border-0 bg-transparent p-0" data-name="${name}" style="top: 15px; right: 15px; z-index: 5; line-height: 1;">
+                                <i class="${heartClass} fs-5"></i>
+                            </button>
+                        `);
+                    }
+                }
+            });
+
+            updateWishlistBadge();
+
+            $(document).on('click', '.btn-wishlist', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var btn = $(this);
+                var name = btn.data('name');
+                var wishlist = getWishlist();
+                var index = wishlist.findIndex(item => item.name === name);
+                var heartIcon = btn.find('i');
+
+                if (index > -1) {
+                    wishlist.splice(index, 1);
+                    heartIcon.removeClass('fa-solid fa-heart text-danger').addClass('fa-regular fa-heart text-secondary');
+                } else {
+                    var price = 500.00;
+                    var img = "";
+                    
+                    var menuCard = btn.closest('.menu-card');
+                    if (menuCard.length > 0) {
+                        var priceText = menuCard.find('.menu-card-price').text();
+                        price = parseFloat(priceText.replace(/[^\d.]/g, '')) || 0;
+                        img = menuCard.find('.menu-card-img-circle img').attr('src');
+                    } 
+                    else {
+                        var productCard = btn.closest('.product-card');
+                        if (productCard.length > 0) {
+                            var priceText = productCard.find('.fw-bold').first().text();
+                            price = parseFloat(priceText.replace(/[^\d.]/g, '')) || 0;
+                            img = productCard.find('.product-img').attr('src');
+                        }
+                        else {
+                            var giftCard = btn.closest('.card-gift');
+                            if (giftCard.length > 0) {
+                                img = giftCard.find('.gift-banner-img').attr('src');
+                            }
+                        }
+                    }
+
+                    wishlist.push({
+                        name: name,
+                        price: price,
+                        img: img || 'https://www.starbucks.in/assets/icon/logo.png'
+                    });
+                    heartIcon.removeClass('fa-regular fa-heart text-secondary').addClass('fa-solid fa-heart text-danger');
+                }
+
+                saveWishlist(wishlist);
+            });
+        });
+    </script>
+</body>
+</html>
